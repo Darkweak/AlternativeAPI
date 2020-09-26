@@ -53,7 +53,7 @@ public class GameRunner {
 	}
 
 	public void launch() {
-		this.launch(new String[]);
+		this.launch(new String[]{});
 	}
 
     public void launch(String[] parameters) throws Exception
@@ -109,7 +109,7 @@ public class GameRunner {
 		OperatingSystem os = OperatingSystem.getCurrentPlatform();
         commands.add(OperatingSystem.getJavaPath());
         commands.add("-XX:-UseAdaptiveSizePolicy");
-		for (additionalCommand: additionalCommands) {
+		for (String additionalCommand: additionalCommands) {
 			commands.add(additionalCommand);
 		}
 
